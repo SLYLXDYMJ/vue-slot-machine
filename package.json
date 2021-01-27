@@ -1,0 +1,26 @@
+{
+  "name": "vue-slot-machine",
+  "version": "0.0.1",
+  "module": "dist/vue-slot-machine.esm.js",
+  "unpkg": "dist/vue-slot-machine.js",
+  "author": "q-jason",
+  "description": "基于 vue 的老虎机组件",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.34.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-css-only": "^3.0.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-template-compiler": "^2.6.12"
+  }
+}

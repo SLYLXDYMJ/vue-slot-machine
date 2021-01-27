@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>template-rollup</title>
+</head>
+<body>
+
+<div class="root">
+  <div>
+    <button @click="start()">开始（正常）</button>
+    <button @click="start({ goodLuck: true, goodLuckI: 2 })">开始（必中奖）</button>
+    <button @click="start({ badLuck: true })">开始（必不中奖）</button>
+    <button @click="reset">重置</button>
+  </div>
+  <vue-slot-machine
+    v-if="spriteMap"
+    ref="game"
+    :sprite-map="spriteMap"
+    :item-num="3"
+    :col-num="3"
+    :width="130"
+    :item-height="160"
+    @complete="onComplete"/>
+</div>
+
+<script src="./vue.min.js"></script>
+<script src="../dist/vue-slot-machine.js"></script>
+<script>
+  new Vue({
+    data () {
+      return {
+        spriteMap: './sprite-map.jpg'
+      }
+    },
+    methods: {
+      start (opts) {
+        this.$refs.game.start(opts)
+      },
+      reset () {
+        this.$refs.game.reset()
+      },
+      onComplete (result) {
+        console.log(result)
+      }
+    }
+  }).$mount('.root')
+</script>
+</body>
+</html>
