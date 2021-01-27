@@ -22,6 +22,7 @@
     props: {
       /**
        *  雪碧图
+       *  参考 docs/sprite-map.jpg
        **/
       spriteMap: {
         type: String,
