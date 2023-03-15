@@ -2,7 +2,7 @@
 > 基于 vue 的老虎机组件
 
 ### 效果 demo
-> https://q-jason.github.io/vue-slot-machine/
+> https://slylxdymj.github.io/vue-slot-machine/
 
 ### npm
 ```
